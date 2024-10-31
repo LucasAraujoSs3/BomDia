@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom Dia</title>
+
+    <style>
+        body{
+            background-color: rgb(58, 16, 126);
+        }
+
+        .painel{
+            margin: auto;
+            background-color: rgb(238, 236, 236);
+            width: 550px;
+            height: 550px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: rgb(248, 11, 11);
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Bom dia, meu bem! Que seu dia seja tão especial quanto você é para mim. Estou sempre pensando em você.</h1>
+
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+
+        <h2>Você quer descobrir o bem que você me faz? </h2>
+        
+
+        <a href="https://youtube.com/shorts/eSjKF9UpUd0?si=GmuhCXislkSO3qO1"><button id="sim" > Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
